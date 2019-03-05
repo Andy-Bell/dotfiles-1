@@ -5,8 +5,8 @@
 [hub]
         protocol = https
 [user]
-        name = Sam Phippen
-        email = samphippen@googlemail.com
+        name = Andy Bell
+        email = andy.bell.github@gmail.com
 [credential]
         helper = osxkeychain
 [alias]
@@ -39,5 +39,3 @@
         autocorrect = 1
 [push]
         default = simple
-[heroku]
-	account = samphippen@googlemail.com
