@@ -6,3 +6,4 @@ export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=$HOME/.sr/tools/bin:$PATH
 export PATH=$HOME/.cabal/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
