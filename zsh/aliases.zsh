@@ -12,7 +12,6 @@ alias be="bundle exec"
 alias gau="git add -u"
 alias gca="git commit --amend"
 alias gcf="git commit --fixup HEAD"
-bind -x '"\C-l": clear; ls'
 alias t="bundle exec rspec && bundle exec cucumber"
 alias ber="bundle exec rspec"
 alias bec="bundle exec cucumber"
@@ -21,4 +20,5 @@ alias e="vim ."
 alias fs="foreman start"
 alias ss="./script/server"
 alias fu="docker-compose kill && docker-compose up"
-
+alias tmux="TERM=screen-256color tmux"
+alias vim='/usr/local/Cellar/vim/8.1.0950/bin/vim'
