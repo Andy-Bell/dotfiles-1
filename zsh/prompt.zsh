@@ -10,7 +10,7 @@ git_dirty() {
   st=$(/usr/bin/git status 2>/dev/null | tail -n 1)
   if [[ $st == "" ]]
   then
-    echo ""
+    echo "on %{$fg_bold[white]%}$(git_prompt_info)%{$reset_color%}"
   else
     if [[ $st == "nothing to commit (working directory clean)" ]]
     then
