@@ -1,9 +1,5 @@
 alias git=hub
 
-
-#I fucking love sprunge
-alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
-
 export HOST=""
 #os specific editor setup
 #and give ls colors
@@ -95,14 +91,7 @@ alias t="bundle exec rspec && bundle exec cucumber"
 alias ber="bundle exec rspec"
 alias bec="bundle exec cucumber"
 alias u="cd .."
-alias rc="cd ~/dev/rspec/rspec-dev/repos/rspec-core"
-alias rs="cd ~/dev/rspec/rspec-dev/repos/rspec-mocks"
-alias re="cd ~/dev/rspec/rspec-dev/repos/rspec-expectations"
-alias rss="cd ~/dev/rspec/rspec-dev/repos/rspec-support"
-alias rr="cd ~/dev/rspec/rspec-dev/repos/rspec-rails"
-alias rd="cd ~/dev/rspec/rspec-dev/repos/rspec-dev"
 alias e="vim ."
-alias srreview="git push gerrit HEAD:refs/for/master"
 alias fs="foreman start"
 alias ss="./script/server"
 alias fu="docker-compose kill && docker-compose up"
