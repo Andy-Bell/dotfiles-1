@@ -14,9 +14,6 @@ Plugin 'gmarik/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'vim-scripts/Conque-Shell'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'https://github.com/nono/vim-handlebars'
 Plugin 'tpope/vim-surround'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'tpope/vim-fugitive'
@@ -49,8 +46,8 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 set      noswapfile
+set      nobackup
 syntax   on
-filetype plugin indent on
 set      nocp
 filetype plugin on
 
