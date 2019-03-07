@@ -96,13 +96,6 @@ alias fs="foreman start"
 alias ss="./script/server"
 alias fu="docker-compose kill && docker-compose up"
 
-alias librato_curl="curl -u samphippen@googlemail.com:0821f2d6a74375fa8e04b20a88b527e4577c4eca556fbba8dfc4dcd4d49e5606"
-
-export ECHO_NEST_API_KEY=NODV0LSHAP8SI9WAF
-export GRACENOTE_KEY=4833280-0C9196934FCD54453CE103F96064FD50
-export MUSICMETRIC_API_KEY=2a4277ac1ae94261aabce70284506e1f
-export SONGKICK_API_KEY=FEXq3znxXVczEfx7
-export FLICKR_API_KEY=094749539632747531e59de509dd8dc6
 export GOPATH="$HOME/dev/do/go"
 
 export PATH="$PATH:$GOPATH/bin"
