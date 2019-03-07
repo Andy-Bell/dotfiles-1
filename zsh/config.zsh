@@ -7,13 +7,19 @@ fi
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
+export TIME_STYLE=long-iso
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 fpath=($ZSH/zsh/functions $fpath)
 
 autoload -U $ZSH/zsh/functions/*(:t)
 
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=30000
+SAVEHIST=30000
 
 setopt NO_BG_NICE # don't nice background tasks
 setopt NO_HUP
