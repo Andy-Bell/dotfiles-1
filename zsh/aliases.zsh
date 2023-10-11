@@ -21,4 +21,11 @@ alias fs="foreman start"
 alias ss="./script/server"
 alias fu="docker-compose kill && docker-compose up"
 alias tmux="TERM=screen-256color tmux"
-alias vim='/usr/local/Cellar/vim/8.1.0950/bin/vim'
+alias python="/usr/local/python3"
+alias vim='/usr/local/vim'
+alias docker=podman
+alias ld='lazydocker'
+alias kcdev='export KUBECONFIG=~/.kube/edge-dev && kubectl config use-context kind-edge-dev'
+alias kcp='kubectl -n prod'
+alias kcs='kubectl -n sit'
+alias lg=lazygit

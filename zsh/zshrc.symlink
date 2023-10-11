@@ -2,13 +2,16 @@
 export ZSH=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/Code
+export PROJECTS=~/dev
 
 export GPG_TTY=$(tty)
 export EDITOR=vim
 
+
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
+
+eval "$(/usr/local/homebrew/bin/brew shellenv)"
 
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
@@ -20,9 +23,18 @@ then
   source ~/.localrc
 fi
 
+source /usr/local/opt/chruby/share/chruby/chruby.sh
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
 
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.zsh) source $config_file
+
+# set kubecontext to local dev
+kcdev
+
+export NVM_DIR="$HOME/.nvm"
+export DOCKER_HOST='unix:///Users/andy/.local/share/containers/podman/machine/qemu/podman.sock'
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

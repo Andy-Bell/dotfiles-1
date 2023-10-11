@@ -40,6 +40,22 @@ need_push () {
   fi
 }
 
+kc_prompt(){
+  read config_file_path <<< "${${KUBECONFIG}##*/}"
+
+  case $config_file_path in
+    edge-prod-eks)
+        echo "%{$fg_bold[red]%}${config_file_path}%{$reset_color%}"
+        ;;
+    edge-us-prod-eks)
+        echo "%{$fg_bold[red]%}${config_file_path}%{$reset_color%}"
+        ;;
+    *)
+        echo "${config_file_path}"
+        ;;
+  esac
+}
+
 rb_prompt(){
   if $(which ruby &> /dev/null)
   then
@@ -75,7 +91,7 @@ directory_name(){
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
 }
-export PROMPT=$'%{\e[0;34m%}%B┌─[%b%{\e[0m%}%{\e[1;32m%}%n%{\e[1;30m%}@%{\e[0m%}%{\e[0;36m%}%m%{\e[0;34m%}%B]%b%{\e[0m%} - %b%{\e[0;34m%}%B[%b%{\e[1;37m%}%~%{\e[0;34m%}%B]%b%{\e[0m%} - [ruby $(rb_prompt)] - %{\e[0;34m%}%B[%b%{\e[0;33m%}'%D{"%a %b %d, %H:%M"}%b$'%{\e[0;34m%}%B]%b%{\e[0m%}
+export PROMPT=$'%{\e[0;34m%}%B┌─[%b%{\e[0m%}%{\e[1;32m%}%n%{\e[1;30m%}@%{\e[0m%}%{\e[0;36m%}%m%{\e[0;34m%}%B]%b%{\e[0m%} - %b%{\e[0;34m%}%B[%b%{\e[1;37m%}%~%{\e[0;34m%}%B]%b%{\e[0m%} - [current kubeconfig $(kc_prompt)] - %{\e[0;34m%}%B[%b%{\e[0;33m%}'%D{"%a %b %d, %H:%M"}%b$'%{\e[0;34m%}%B]%b%{\e[0m%}
 %{\e[0;34m%}%B└─%B[%{\e[1;35m%}$%{\e[0;34m%}%B] <$(git_dirty)>%{\e[0m%}%b '
 PS2=$' \e[0;34m%}%B>%{\e[0m%}%b '
 
